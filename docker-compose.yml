@@ -1,0 +1,26 @@
+version: '3'
+
+volumes:
+  mysql-data:
+
+services:
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/asobasal'
+    tty: true
+    stdin_open: true
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    image: mysql:5.6
+    volumes:
+      - 'mysql-data:/var/lib/mysql'
+    environment:
+      - 'MYSQL_ROOT_PASSWORD=password'

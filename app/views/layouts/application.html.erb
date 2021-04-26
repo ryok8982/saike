@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Asobasal</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'false' %>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <ul class="headerLeft">
+        <li>
+          <a href="#">スタッフ</a>
+        </li>
+        <li class=navbar-center>
+          <a href="#">アクテビティ</a>
+        <li>
+          <a href="#">アクセス</a>
+        </li>
+      </ul>
+      <div class="logo">
+
+          <h1>Saike</h1>
+
+      </div>
+      <div class="headerRight">
+        <h3>予約問い合わせ</h3>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+
+    </footer>
+
+
+  </body>
+</html>

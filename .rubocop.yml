@@ -1,0 +1,23 @@
+require:
+  rubocop-rspec
+
+inherit_from:
+  - .rubocop_airbnb.yml
+
+Rails:
+  Enabled: true
+
+LineLength:
+  Max: 130
+
+AllCops:
+  Exclude:
+    - "node_modules/**/*" 
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - "vendor/**/*"
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+    - !ruby/regexp /old_and_unused\.rb$/

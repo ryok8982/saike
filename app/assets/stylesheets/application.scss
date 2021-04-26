@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  @import "../app/assets/stylesheets/slick-theme.scss";
+  @import "slick.scss";
+  @import "bulma";
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Alegreya Sans SC', sans-serif;
+ }
+
+ header{
+   display: flex;
+   position:fixed;
+   z-index: 100;
+   width: 100%;
+   height:80px;
+   padding:0px 50px;
+   background-color: #fff;
+   align-items:center;
+   color: #000;
+ }
+
+ h1{
+   font-size: 40px;
+ }
+
+ h3 {
+   font-size:20px;
+ }
+
+ main{
+   background-color: #727171;
+ }
+
+ .headerLeft{
+
+  display: flex;
+  list-style: none;
+  width:150px;
+   color: #000;
+}
+
+.headerLeft li a{
+  white-space: nowrap
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-center {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.headerRight {
+  padding:5px 25px;
+  border: solid 1px #FFF;
+
+}
+
+.headerRight h3{
+  margin:0 auto;
+}
+
+.logo{
+  margin:0 auto;
+}
+
+h2{
+  font-size: 32px;
+}
