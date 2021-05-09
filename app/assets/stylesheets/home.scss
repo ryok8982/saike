@@ -127,15 +127,38 @@
  .aboutusInfo{
    padding-top: 50px;
    width:50%;
+ }
+
+ .aboutusInfo h2{
+   text-align: center;
+ }
+
+ .profileBorn{
    text-align: center;
  }
 
  .profileName{
    padding-top: 30px;
    padding-bottom: 20px;
+   text-align: center;
  }
 
  .profileImage{
    width: 50%;
    padding: 0 90px 0 30px;
  }
+
+ .qualification{
+   margin: 15px 0;
+   text-align: center;
+ }
+
+.profileBody{
+  width: 75%;
+  margin:0 auto;
+  line-height: 30px;
+}
+
+.logoImage{
+  height: 110px;
+}
