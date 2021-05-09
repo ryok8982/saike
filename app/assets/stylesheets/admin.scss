@@ -1,0 +1,55 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.admin_index{
+  height:300px;
+  margin-top:50px;
+  background-color: #FFF;
+  padding: 20px;
+}
+
+.admin_user_index{
+  height:auto;
+  background-color: #FFF;
+  margin-top:50px;
+}
+
+.admin_menu{
+  height: 100%;
+  display:flex;
+  width:100%;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.admin_title{
+  padding-top: 10px;
+  color:black;
+  font-weight: bold;
+}
+
+.admins h3{
+  color:black;
+}
+
+.admins{
+  align-items: center;
+  padding:50px 30px;
+  border: 1px solid black;
+  box-shadow: 2px 2px black;
+}
+
+.index_table{
+  width:100%;
+}
+
+.table_edit{
+  color:black;
+}
+
+.adminNewRoom{
+  padding-top: 15px;
+  background-color: #727171;
+  width: 100%;
+  text-align: center;
+}

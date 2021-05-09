@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'false' %>
@@ -25,13 +25,33 @@
         </li>
       </ul>
       <div class="logo">
+        <%= link_to root_path do %>
           <img class="logoImage" src="/assets/logo_w.png" alt="">
+        <% end %>
       </div>
-      <div class="headerRight">
-        <h3>予約問い合わせ</h3>
-      </div>
+      <% if user_signed_in? %>
+        <div class="headerRight">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        </div>
+      <% else %>
+        <div class="headerRight">
+          <h3>予約問い合わせ</h3>
+        </div>
+      <% end %>
     </header>
+    <main>
+    <% if flash[:notice] %>
+      <div class="notification is-info">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="notification is-danger">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
     <%= yield %>
+    </main>
     <footer>
 
     </footer>

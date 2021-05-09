@@ -23,6 +23,10 @@
    font-family: 'Alegreya Sans SC', sans-serif;
  }
 
+ .notification:not(:last-child){
+ 	margin-bottom: 0;
+ }
+
  header{
    display: flex;
    position:fixed;
@@ -35,16 +39,16 @@
    color: #000;
  }
 
+main{
+  padding-top: 80px;
+}
+
  h1{
    font-size: 40px;
  }
 
  h3 {
    font-size:20px;
- }
-
- main{
-   background-color: #727171;
  }
 
  .headerLeft{

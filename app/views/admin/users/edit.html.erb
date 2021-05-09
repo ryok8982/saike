@@ -1,0 +1,14 @@
+<h2>管理画面　ユーザー編集</h2>
+<section class="section">
+  <div class="detailContainer">
+    <h3><%= @user.username %></h3>
+    <p><%= @user.email %></p>
+    <%= form_for @user do |f| %>
+      <div class="field">
+        <%= f.label :admin, "admin権限", class: "label" %>
+        <%= f.check_box :admin, autofocus: true %>
+      </div>
+      <%= f.submit "更新", class: "button" %>
+    <% end %>
+  </div>
+</section>
