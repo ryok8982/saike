@@ -1,0 +1,76 @@
+// Place all the styles related to the Activitys controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.activitysPageTop{
+  margin-bottom: 80px;
+}
+
+.activitysTopDiscribe{
+  margin:50px auto 0 auto;
+  width:80%;
+}
+
+.activitysSaike{
+  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  width:100%;
+  text-align: center;
+  letter-spacing: 30px;
+  margin-bottom:30px;
+}
+
+.activitysSaike span{
+  font-size: 20px;
+}
+
+.whySaike{
+  text-align: center;
+}
+
+.activitysImg{
+  height: 430px;
+  overflow: hidden;
+  position: relative;
+}
+.activity_imgs{
+  width:100%;
+  position: absolute;
+  top: 50%; /* トップを基準に中央配置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.activitysDiscribe{
+  height: 430px;
+}
+
+.activitysDiscribe{
+margin:30px auto;
+width:80%;
+}
+
+.textContainer{
+  width:100%;
+  text-align: center;
+}
+
+
+
+.activityTime{
+  margin-top:30px;
+  width: 100%;
+  text-align: center;
+}
+
+.activityPrice{
+  margin-top: 30px;
+}
+.prices{
+  display: flex;
+  justify-content: space-around;
+}
+
+.forOne{
+  width: 100%;
+  text-align: center;
+}
