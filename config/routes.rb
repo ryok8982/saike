@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   namespace :admin do
     resources :users
+    resources :news
   end
   resources :activitys
   get 'admin', to: 'admin#index'
