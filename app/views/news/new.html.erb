@@ -1,4 +1,4 @@
-<section>
+<section class="forms">
   <%= form_with model: @news, local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
     <div class="field">
@@ -7,7 +7,7 @@
     </div>
     <div class="field">
       <%= f.label :body, "内容" %>
-      <%= f.text_area :body, class: "input" %>
+      <%= f.text_area :body, class: "input formBody" %>
     </div>
     <div class="field">
       <%= f.label :image, "写真", class: "label" %>

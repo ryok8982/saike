@@ -1,0 +1,51 @@
+<article class="activitysPage">
+  <section class="activitysPageTop">
+    <div class="activitysTopImage">
+      <img class="activitys_top_image" src="/assets/DSC_0261_1.JPG" alt="">
+    </div>
+    <div class="activitysTopDiscribe">
+      <h1 class="activitysSaike">再渓<span>saike</span></h1>
+      <div class="whySaike">
+        <p>
+          日本有数の長流河川、天塩川水系の最上流域にある名寄川。 <br>
+          この川の一番わかりやすい魅力を言えば「日本で最も長い旅をするヤマメが住む町」でしょう。 <br>
+          その距離は250kmを越え、私たちが生まれるずっと前から様々なリスクを乗り越え何千年と奇跡を繰り返しています。 <br>
+          その魚たちが紡いできた「歴史」に想いを馳せ、この令和になっても私たちにその奥行きを教えてくれる。 <br>
+          ぜひ下川へ来てその町の流域を歩いて、泳いでみてください。 <br>
+          言葉にすることができなほどの理由をご案内します。
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="activitys">
+    <% @activities.each do |act| %>
+      <% if act.display == true %>
+        <div class="activitysContainer">
+          <div class="activitysImg">
+            <%= attachment_image_tag act, :image, class: "activity_imgs" %>
+          </div>
+          <div class="activitysDiscribe">
+            <h2><%= act.title %></h2>
+            <div class="textContainer">
+              <p class="activitysText">
+                <%= safe_join(act.body.split("\n"),tag(:br)) %>
+              </p>
+            </div>
+            <div class="activityTime">
+              <h3>所要時間　<%= act.time %></h3>
+            </div>
+            <div class="activityPrice">
+              <div class="prices">
+                <h3>大人１名　<%= act.price %></h3>
+                <h3>子供１名　<%= act.price_for_child %></h3>
+              </div>
+              <div class="forOne">
+                <h4>※大人一人の場合<%= act.price_for_one %></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </section>
+</article>

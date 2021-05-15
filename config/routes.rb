@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :news
+    resources :activities
   end
-  resources :activitys
+  resources :activities
   get 'admin', to: 'admin#index'
   devise_for :users
   root to: "home#index"

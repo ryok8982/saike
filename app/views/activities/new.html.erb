@@ -1,0 +1,36 @@
+<section class="forms">
+  <%= form_with model: @activity, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="field">
+      <%= f.label :title, "タイトル" %>
+      <%= f.text_field :title, class: "input" %>
+    </div>
+    <div class="field">
+      <%= f.label :body, "内容" %>
+      <%= f.text_area :body, class: "input formBody" %>
+    </div>
+    <div class="field">
+      <%= f.label :image, "写真", class: "label" %>
+      <%= f.attachment_field :image, class: "input" %>
+    </div>
+    <div class="field">
+      <%= f.label :time, "所要時間" %>
+      <%= f.text_field :time, class: "input" %>
+    </div>
+    <div class="field">
+      <%= f.label :price, "値段(大人)" %>
+      <%= f.text_field :price, class: "input" %>
+    </div>
+    <div class="field">
+      <%= f.label :price_for_child, "値段(子供)" %>
+      <%= f.text_field :price_for_child, class: "input" %>
+    </div>
+    <div class="field">
+      <%= f.label :price_for_one, "値段(１人)" %>
+      <%= f.text_field :price_for_one, class: "input" %>
+    </div>
+    <div class="reservationSubmit">
+      <%= f.submit class: "black" %>
+    </div>
+  <% end %>
+</section>
