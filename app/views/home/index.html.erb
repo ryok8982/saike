@@ -7,9 +7,9 @@
   <div class="news_body">
     <h2>お知らせ</h2>
     <ul class="news_list">
-      <li>お知らせだよ</li>
-      <li>コロナで大変 ><;</li>
-      <li>下川ではまだ感染者いないよ！</li>
+      <% @newses.first(3).each do |news| %>
+      <li><%= link_to news.title, news_path(news) %></li>
+      <% end %>
     </ul>
   </div>
 </section>
@@ -46,10 +46,9 @@
 </section>
 <section class="activity_info">
   <ul class="activityImgs slider">
-    <li><img src="/assets/DSC_2251.JPG" alt="" class="activity_img"><p class="slideTitle">リバーウォーク</p></li>
-    <li><img src="/assets/Screenshot_20200722-141726 (1).png" alt="" class="activity_img"><p class="slideTitle">フローイング</p></li>
-    <li><img src="/assets/KIMG3738.JPG" alt="" class="activity_img"><p class="slideTitle">渓流釣りガイド</p></li>
-    <li><img src="/assets/スノーシューイング.jpg" alt="" class="activity_img"><p class="slideTitle">スノーシューイング</p></li>
+    <% @activities.each do |act| %>
+    <li><%= attachment_image_tag act, :image, class: "activity_img" %><p class="slideTitle"><%= act.title %></p></li>
+    <% end %>
   </ul>
 </section>
 <section class="aboutus">
