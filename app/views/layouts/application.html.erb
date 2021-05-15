@@ -19,13 +19,13 @@
           <a href="#">スタッフ</a>
         </li>
         <li class=navbar-center>
-          <a href="#">アクテビティ</a>
+          <%= link_to "アクティビティ", activitys_path, data: {"turbolinks" => false} %>
         <li>
           <a href="#">アクセス</a>
         </li>
       </ul>
       <div class="logo">
-        <%= link_to root_path do %>
+        <%= link_to root_path, data: {"turbolinks" => false}  do %>
           <img class="logoImage" src="/assets/logo_w.png" alt="">
         <% end %>
       </div>

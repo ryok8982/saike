@@ -1,0 +1,89 @@
+// Place all the styles related to the News controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.newsDetaile{
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.news{
+  height: auto;
+}
+
+.newsTopImage{
+  height: 430px;
+  overflow: hidden;
+  position: relative;
+}
+.news_top_image{
+  width:100%;
+  position: absolute;
+  top: 50%; /* トップを基準に中央配置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.newsPage{
+  width:70%;
+  margin-top: 100px;
+}
+
+.newsTitle{
+  width:50%;
+}
+
+.newsTitle h3{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.newsTitle h3::before{
+  content: '';
+  flex-grow: 1;/* 余白を分け与える */
+  margin-right: 10px;
+  height: 1px;
+  background: green;
+}
+
+.newsImg {
+  width:50%;
+  height: auto;
+  margin:100px auto;
+}
+
+.newsBody{
+  width:80%;
+  margin:0 auto;
+}
+
+.newsDate{
+  margin: 0 auto;
+  width:80%;
+  text-align: right;
+}
+
+
+
+.newsLists{
+  width:20%;
+  margin:100px 0;
+}
+
+.topics{
+  width:100%;
+  margin:0 auto;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #000;
+  margin-bottom: 30px;
+}
+
+.newsList{
+  width:80%;
+  margin: 0 auto;
+}
+
+.newsList li{
+  list-style: disc;
+  margin-bottom:15px;
+}

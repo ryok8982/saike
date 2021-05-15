@@ -1,0 +1,20 @@
+<section>
+  <%= form_with model: @news, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="field">
+      <%= f.label :title, "タイトル" %>
+      <%= f.text_field :title, class: "input" %>
+    </div>
+    <div class="field">
+      <%= f.label :body, "内容" %>
+      <%= f.text_area :body, class: "input" %>
+    </div>
+    <div class="field">
+      <%= f.label :image, "写真", class: "label" %>
+      <%= f.attachment_field :image, class: "input" %>
+    </div>
+    <div class="reservationSubmit">
+      <%= f.submit class: "black" %>
+    </div>
+  <% end %>
+</section>

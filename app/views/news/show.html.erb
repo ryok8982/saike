@@ -1,0 +1,38 @@
+<article class="newsIndexPage">
+  <section>
+    <div class="newsTopImage">
+      <img class="news_top_image" src="/assets/DSC_0261_1.JPG" alt="">
+    </div>
+  </section>
+  <section class="newsDetaile">
+    <div class="newsPage">
+      <div class="newsTitle">
+        <h3><%= @news.title %></h3>
+      </div>
+      <div class="newsImg">
+        <%= attachment_image_tag @news, :image, class: "newsImage" %>
+      </div>
+      <div class="newsBody">
+        <p>
+          <%= safe_join(@news.body.split("\n"),tag(:br)) %>
+        </p>
+      </div>
+      <div class="newsDate">
+        <%= @news.created_at.strftime("%m月%d日%H時%M分") %>
+      </div>
+    </div>
+    <aside class="newsLists">
+      <h3 class="topics">お知らせ一覧</h3>
+      <ul class="newsList">
+        <% @newses.each do |news| %>
+          <% if news.id != @news.id %>
+            <%= link_to news_path(news) do %>
+              <li><%= news.title %></li>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ul>
+    </aside>
+
+  </section>
+</article>

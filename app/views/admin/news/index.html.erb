@@ -1,0 +1,23 @@
+<h2>管理画面　お知らせ一覧</h2>
+<section class="admin_index">
+  <table border="1" class="index_table">
+    <tr class="user_header">
+      <th>id</th>
+      <th>title</th>
+      <th>body</th>
+      <th>created_at</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+    <% @newses.each do |news| %>
+      <tr class="admin_users">
+        <th><%= news.id %></th>
+        <th><%= news.title %></th>
+        <th><%= news.body %></th>
+        <th><%= news.created_at.strftime("%m月%d日%H時%M分") %></th>
+        <th><%= link_to edit_news_path(news), class: "table_edit" do %>編集<% end %></th>
+        <th><%= link_to '削除', news_path(news), method: :delete, class: "black" %></th>
+      </tr>
+    <% end %>
+  </table>
+</section>
