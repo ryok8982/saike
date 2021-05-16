@@ -1,0 +1,45 @@
+<article>
+  <section>
+    <div class="reservationsNewTitle">
+      <h3>リクエスト</h3>
+    </div>
+    <div class="reservationsNewMain">
+      <aside class="reservationForm">
+        <%= form_with model: @request, local: true do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
+          <div class="field">
+            <%= f.label :name, "氏名" %>
+            <%= f.text_field :name, class: "input" %>
+          </div>
+          <div class="field">
+            <%= f.label :email, "メールアドレス" %>
+            <%= f.text_field :email, class: "input" %>
+          </div>
+          <div class="field white">
+            <%= f.label :tel, "電話番号" %>
+            <%= f.text_field :tel, class: "input" %>
+          </div>
+          <div class="field white">
+            <%= f.label :address, "住所" %>
+            <%= f.text_field :address, class: "input" %>
+          </div>
+          <div class="checkinForm field">
+            <%= f.label :start_date, "予約希望日時:" %>
+            <%= f.datetime_select :start_date, {minute_step: 30}, {:class => "black"} %>
+          </div>
+          <div class="field">
+            <%= f.label :message, "備考,質問等" %>
+            <%= f.text_area :message, class: "input" %>
+          </div>
+          <div class="field">
+            <%= f.label :activity_id, "アクティビティを選択" %>
+            <%= f.collection_select :activity_id, @activities, :id, :title, include_blank: "選択して下さい", class: "input" %>
+          </div>
+          <div class="reservationSubmit">
+            <%= f.submit class: "black" %>
+          </div>
+        <% end %>
+      </aside>
+    </div>
+  </section>
+</article>

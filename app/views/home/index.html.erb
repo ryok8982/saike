@@ -47,7 +47,9 @@
 <section class="activity_info">
   <ul class="activityImgs slider">
     <% @activities.each do |act| %>
-    <li><%= attachment_image_tag act, :image, class: "activity_img" %><p class="slideTitle"><%= act.title %></p></li>
+      <%= link_to activities_path do %>
+        <li><%= attachment_image_tag act, :image, class: "activity_img" %><p class="slideTitle"><%= act.title %></p></li>
+      <% end %>
     <% end %>
   </ul>
 </section>

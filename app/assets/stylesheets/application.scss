@@ -16,6 +16,7 @@
   @import "../app/assets/stylesheets/slick-theme.scss";
   @import "slick.scss";
   @import "bulma";
+  @import "font-awesome";
  *{
    margin: 0;
    padding: 0;
@@ -97,4 +98,64 @@ h2{
 
 .formBody{
   height: 200px;
+}
+
+footer{
+  height:300px;
+  display: flex;
+  justify-content:space-between;
+  padding-top: 100px;
+  padding:0px 100px;
+  color: #432;
+  background-color: white;
+}
+
+.footerLeft{
+  margin: auto 0;
+}
+
+.footerLeft a{
+  align-items: center;
+  margin: 50px 15px;
+}
+
+.c{
+  margin-top: 100px;
+}
+
+.footerLeft p{
+  align-items: end;
+}
+
+.footerCenter {
+text-align: center;
+margin: auto;
+}
+
+.footerOpen{
+  margin-bottom:30px;
+}
+
+.footerOpen p{
+  font-size: 20px;
+}
+
+.footerCenterItem h2{
+  margin-bottom: 20px;
+}
+
+.footerRight{
+  margin:auto 0;
+}
+
+.c_responsive{
+  display: none;
+}
+
+.center{
+  margin:0 auto;
+}
+
+.footerLogoImage{
+  width:200px;
 }

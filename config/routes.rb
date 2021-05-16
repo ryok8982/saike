@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'request/index'
+  get 'request/new'
   resources :news
   resources :users
+  resources :requests
   namespace :admin do
     resources :users
     resources :news

@@ -35,7 +35,9 @@
         </div>
       <% else %>
         <div class="headerRight">
-          <h3>予約問い合わせ</h3>
+          <%= link_to request_new_path, data: {"turbolinks" => false}  do %>
+            <h3>予約問い合わせ</h3>
+          <% end %>
         </div>
       <% end %>
     </header>
@@ -53,7 +55,22 @@
     <%= yield %>
     </main>
     <footer>
+      <div class="footerLeft">
+        <a href="https://instagram.com/be_yan_kappa_guide?igshid=qm7fwrm12pzw" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100017020120504" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
 
+        <p class="c">©︎ RyosukeOnishi</p>
+      </div>
+      <div class="footerCenter">
+        <div class="footerOpen footerCenterItem">
+          <img class="footerLogoImage" src="/assets/logo_w.png" alt="">
+        </div>
+      </div>
+      <div class="footerRight">
+        <h4>Address</h4>
+        <p>北海道上川郡下川町</p>
+        <p class="c_responsive">©︎ RyosukeOnishi</p>
+      </div>
     </footer>
 
 
