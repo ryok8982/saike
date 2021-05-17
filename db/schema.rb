@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_16_021709) do
+ActiveRecord::Schema.define(version: 2021_05_17_055544) do
 
   create_table "activities", force: :cascade do |t|
     t.string "title"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_05_16_021709) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "message"
+    t.integer "people_adult", default: 0
+    t.integer "people_child",default: 0
     t.index ["activity_id"], name: "index_requests_on_activity_id"
   end
 

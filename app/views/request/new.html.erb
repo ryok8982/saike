@@ -1,10 +1,14 @@
 <article>
-  <section>
-    <div class="reservationsNewTitle">
+  <section class= "requests">
+    <div class="requestNewTitle">
       <h3>リクエスト</h3>
+      <p>
+        ご希望のアクティビティ、日程等をご記入してフォームを送信してください。 <br>
+        ※こちらは予約確定ではありません。いただきました内容より当ガイドからご連絡差し上げます。
+      </p>
     </div>
-    <div class="reservationsNewMain">
-      <aside class="reservationForm">
+    <div class="requestNewMain">
+      <aside class="requestForm">
         <%= form_with model: @request, local: true do |f| %>
           <%= render 'shared/error_messages', model: f.object %>
           <div class="field">
@@ -27,6 +31,16 @@
             <%= f.label :start_date, "予約希望日時:" %>
             <%= f.datetime_select :start_date, {minute_step: 30}, {:class => "black"} %>
           </div>
+          <div class="people">
+            <div class="field">
+              <%= f.label :people_adult, "大人人数" %>
+              <%= f.select :people_adult, [["--", 0],["1", 1],["2", 2],["3",3],["4",4],["5", 5],["6", 6],["7",7],["8",8]] %>
+            </div>
+            <div class="field">
+              <%= f.label :people_child, "子供人数" %>
+              <%= f.select :people_child, [["--", 0],["1", 1],["2", 2],["3",3],["4",4],["5", 5],["6", 6],["7",7],["8",8]] %>
+            </div>
+          </div>
           <div class="field">
             <%= f.label :message, "備考,質問等" %>
             <%= f.text_area :message, class: "input" %>
@@ -35,7 +49,7 @@
             <%= f.label :activity_id, "アクティビティを選択" %>
             <%= f.collection_select :activity_id, @activities, :id, :title, include_blank: "選択して下さい", class: "input" %>
           </div>
-          <div class="reservationSubmit">
+          <div class="requestSubmit">
             <%= f.submit class: "black" %>
           </div>
         <% end %>
