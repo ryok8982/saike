@@ -28,13 +28,13 @@
             <%= f.text_field :address, class: "input" %>
           </div>
           <div class="checkinForm field">
-            <%= f.label :start_date, "予約希望日時:" %>
-            <%= f.datetime_select :start_date, {minute_step: 30}, {:class => "black"} %>
+            <%= f.label :request_date, "予約希望日時:" %>
+            <%= f.datetime_select :request_date, {minute_step: 30}, {:class => "black"} %>
           </div>
           <div class="people">
             <div class="field">
               <%= f.label :people_adult, "大人人数" %>
-              <%= f.select :people_adult, [["--", 0],["1", 1],["2", 2],["3",3],["4",4],["5", 5],["6", 6],["7",7],["8",8]] %>
+              <%= f.select :people_adult, [["--", 0],["1", 1],["2", 2],["3", 3],["4", 4],["5", 5],["6", 6],["7",7],["8",8]] %>
             </div>
             <div class="field">
               <%= f.label :people_child, "子供人数" %>

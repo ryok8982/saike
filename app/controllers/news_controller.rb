@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  before_action :admin_user, only: [:new, :edit]
   def index
     @newses = News.all
   end
@@ -43,10 +44,14 @@ class NewsController < ApplicationController
       redirect_to new_news_path
     end
   end
-end
 
 private
 
-def news_params
-  params.require(:news).permit(:title, :body, :image)
+  def news_params
+    params.require(:news).permit(:title, :body, :image)
+  end
+
+  def admin_user
+    redirect_to(new_user_session_path) unless current_user.admin?
+  end
 end

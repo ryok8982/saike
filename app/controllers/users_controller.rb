@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :admin_user, only: [:new]
   def edit
     @user = User.find(params[:id])
   end
@@ -15,7 +16,11 @@ class UsersController < ApplicationController
       redirect_to edit_admin_user_path(@user)
     end
   end
+  private
   def user_params
     params.require(:user).permit(:username, :email, :admin)
+  end
+  def admin_user
+    redirect_to(new_user_session_path) unless current_user.admin?
   end
 end

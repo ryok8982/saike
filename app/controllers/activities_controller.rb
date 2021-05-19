@@ -1,4 +1,5 @@
 class ActivitiesController < ApplicationController
+  before_action :admin_user, only: [:new, :edit]
   def index
     @activities = Activity.all
   end
@@ -44,5 +45,9 @@ class ActivitiesController < ApplicationController
 
   def activity_params
     params.require(:activity).permit(:title, :body, :price, :time, :price_for_child, :price_for_one, :display, :image)
+  end
+
+  def admin_user
+    redirect_to(new_user_session_path) unless user_signed_in? && current_user.admin
   end
 end
