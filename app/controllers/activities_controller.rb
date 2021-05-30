@@ -26,7 +26,7 @@ class ActivitiesController < ApplicationController
   def destroy
     activity = Activity.find(params[:id])
       activity.destroy
-      redirect_to admin_activity_path, notice: '削除しました。'
+      redirect_to admin_activities_path, notice: '削除しました。'
   end
 
   def update

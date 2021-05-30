@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_17_055544) do
+ActiveRecord::Schema.define(version: 2021_05_27_134848) do
 
   create_table "activities", force: :cascade do |t|
     t.string "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_05_17_055544) do
     t.boolean "display", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "price_display", default: true
   end
 
   create_table "news", force: :cascade do |t|
@@ -36,15 +37,15 @@ ActiveRecord::Schema.define(version: 2021_05_17_055544) do
   create_table "requests", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.integer "tel"
+    t.string "tel"
     t.string "address"
     t.datetime "request_date"
     t.integer "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "message"
-    t.integer "people_adult", default: 0
-    t.integer "people_child",default: 0
+    t.integer "people_adult"
+    t.integer "people_child"
     t.index ["activity_id"], name: "index_requests_on_activity_id"
   end
 

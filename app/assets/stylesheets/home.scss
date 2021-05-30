@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-.top_slide{
+.slideshow{
   height:500px;
   overflow: hidden;
   display: flex;
@@ -161,4 +161,60 @@
 
 .logoImage{
   height: 110px;
+}
+
+@media screen and (max-width: 1024px) {
+/* 1024pxまでの幅の場合に適応される */
+
+
+}
+@media screen and (max-width: 768px) {
+/* 768pxまでの幅の場合に適応される */
+  .slideshow{
+    height:300px;
+  }
+
+  .shimokawa_info{
+    display: block;
+  }
+
+  .shimokawa_photo{
+    margin:0;
+    width:100%;
+  }
+
+  .shimokawa_photo img{
+    width:100%;
+  }
+
+  .shimokawa_discribe{
+    width:100%;
+    padding:0 15px;
+    text-align: center;
+  }
+
+  .activity_info{
+    margin: 50px 15px;
+  }
+
+  .slick-dots li button {
+    padding: 2px;
+  }
+
+  .profileImage{
+    display: none;
+  }
+
+  .aboutusInfo{
+    width:100%;
+    background-image: url("/assets/DSC_0548 (1).jpg");
+    background-size: cover;
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+/* 480pxまでの幅の場合に適応される */
+
 }

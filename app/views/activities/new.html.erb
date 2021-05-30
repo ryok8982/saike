@@ -18,6 +18,10 @@
       <%= f.text_field :time, class: "input" %>
     </div>
     <div class="field">
+      <%= f.label :display, "値段表示" %>
+      <%= f.check_box :display, autofocus: true %>
+    </div>
+    <div class="field">
       <%= f.label :price, "値段(大人)" %>
       <%= f.text_field :price, class: "input" %>
     </div>

@@ -191,3 +191,10 @@ $slick-opacity-not-active: 0.25 !default;
         }
     }
 }
+@media screen and (max-width: 768px) {
+  .slick-dots li button {
+    padding: 2px;
+    width:10px;
+    height:10px;
+  }
+}

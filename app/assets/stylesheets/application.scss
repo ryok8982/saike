@@ -159,3 +159,18 @@ margin: auto;
 .footerLogoImage{
   width:200px;
 }
+
+@media screen and (max-width: 768px) {
+
+  .headerRight{
+    padding:5px 10px;
+  }
+
+  .headerRight h3{
+    font-size: 15px;
+  }
+
+  header{
+    padding:0 20px;
+  }
+}

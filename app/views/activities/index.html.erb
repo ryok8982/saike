@@ -34,15 +34,17 @@
             <div class="activityTime">
               <h3>所要時間　<%= act.time %></h3>
             </div>
-            <div class="activityPrice">
-              <div class="prices">
-                <h3>大人１名　<%= act.price %>円</h3>
-                <h3>子供１名　<%= act.price_for_child %>円</h3>
+            <% if act.price_display == true %>
+              <div class="activityPrice">
+                <div class="prices">
+                  <h3>大人１名　<%= act.price %>円</h3>
+                  <h3>子供１名　<%= act.price_for_child %>円</h3>
+                </div>
+                <div class="forOne">
+                  <h4>※大人一人の場合<%= act.price_for_one %>円</h4>
+                </div>
               </div>
-              <div class="forOne">
-                <h4>※大人一人の場合<%= act.price_for_one %>円</h4>
-              </div>
-            </div>
+            <% end %>
           </div>
         </div>
       <% end %>
